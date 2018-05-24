@@ -3,7 +3,7 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 
 public class Stickman extends GameObject {
-	int speed;
+	float speed;
 
 	Stickman(int x, int y, int height, int width) {
 		super();
@@ -46,6 +46,7 @@ public class Stickman extends GameObject {
 			speed = speed;
 		}
 		if (rightKey) {
+			System.out.println(speed);
 			//System.out.println(speed);
 			// x = x + speed;
 			x += speed;
@@ -53,7 +54,7 @@ public class Stickman extends GameObject {
 			// System.out.println("Right key");
 		}
 		if (leftKey) {
-			//System.out.println(speed);
+			System.out.println(speed);
 			// x = x - speed;
 			x -= speed;
 			//System.out.println("Left key");

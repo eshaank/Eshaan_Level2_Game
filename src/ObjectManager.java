@@ -92,15 +92,15 @@ public class ObjectManager {
 					}
 					if (stickman instanceof Stickman) {
 
-						if (stickman.collisionBox.intersects(fallingBlock.collisionBox)) {
-							if (((Falling_Blocks) fallingBlock).isBlue) {
-
-								stickman.y -= 6;
-
-							} else {
-
-							}
-						}
+//						if (stickman.collisionBox.intersects(fallingBlock.collisionBox)) {
+//							if (((Falling_Blocks) fallingBlock).isBlue) {
+//
+//								stickman.y -= 6;
+//
+//							} else {
+//
+//							}
+//						}
 						if (stickman instanceof Stickman) {
 
 							if (stickman.collisionBox.intersects(fallingBlock.collisionBox)
@@ -108,8 +108,7 @@ public class ObjectManager {
 									|| stickman.collisionBox3.intersects(fallingBlock.collisionBox)
 									|| stickman.collisionBox4.intersects(fallingBlock.collisionBox)) {
 								if (!(((Falling_Blocks) fallingBlock).isRed)
-										&& !(((Falling_Blocks) fallingBlock).isBlue)
-										&& !(((Falling_Blocks) fallingBlock).isBlack)) {
+										&& !(((Falling_Blocks) fallingBlock).isBlue) && !(((Falling_Blocks) fallingBlock).isBlack)) {
 									stickman.isAlive = false;
 
 									// System.out.println("DEAD");
@@ -119,23 +118,20 @@ public class ObjectManager {
 							}
 						}
 						if (stickman instanceof Stickman) {
-							if (stickman.y > 220) {
-								enemySpawnTime = 700;
-							}
-							
+//							if (stickman.y > 220) {
+//								enemySpawnTime = 700;
+//							}
 
 						}
 						if (stickman instanceof Stickman) {
 							if (stickman.y <= 375) {
 								enemySpawnTime = 225;
-							} else {
-								enemySpawnTime = enemySpawnTime;
-							}
+							} 
 						}
 						if ((stickman.collisionBox.intersects(fallingBlock.collisionBox))) {
 							if (((Falling_Blocks) fallingBlock).isBlue) {
 								stickman.y -= 6;
-								((Stickman) stickman).speed += 1;
+								((Stickman) stickman).speed += 0.3;
 
 							} else {
 
@@ -144,13 +140,12 @@ public class ObjectManager {
 						}
 						if ((stickman.collisionBox.intersects(fallingBlock.collisionBox))) {
 							if (((Falling_Blocks) fallingBlock).isBlack) {
-								stickman.y += 6;
-							} else {
-
+								enemySpawnTime -= 10;
+								System.out.println("hi");
 							}
 						}
 						if (stickman.collisionBox3.intersects(fallingBlock.collisionBox)) {
-							if (((Falling_Blocks) fallingBlock).isRed == false) {
+							if (((Falling_Blocks) fallingBlock).isRed == false && ((Falling_Blocks) fallingBlock).isBlue == false && ((Falling_Blocks) fallingBlock).isBlack == false) {
 								stickman.x -= 6;
 
 							} else {
@@ -159,8 +154,8 @@ public class ObjectManager {
 
 						}
 						if (stickman.collisionBox4.intersects(fallingBlock.collisionBox)) {
-							if (((Falling_Blocks) fallingBlock).isRed == false) {
-								stickman.x += 5;
+							if (((Falling_Blocks) fallingBlock).isRed == false && ((Falling_Blocks) fallingBlock).isBlue == false && ((Falling_Blocks) fallingBlock).isBlack == false) {
+								stickman.x += 6;
 								// System.out.println("COLLISION");
 
 							} else {

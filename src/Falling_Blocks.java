@@ -8,9 +8,6 @@ public class Falling_Blocks extends GameObject {
 	boolean isRed;
 	boolean isBlue;
 	boolean isBlack;
-	static float blueProb = 100;
-	static float redProb = 0f;
-	static float blackProb = 100f;
 
 	Falling_Blocks(int x, int y, int width, int height, int lane) {
 		super();
@@ -19,26 +16,25 @@ public class Falling_Blocks extends GameObject {
 		this.height = height;
 		this.width = width;
 		this.lane = lane;
-		if (Math.random() > blueProb) {
-			isRed = false;
-			isBlue = true;
-			isBlack = false;
-		} else if (Math.random() > redProb) {
-			
-			isRed = true;
-			isBlue = false;
-			isBlack = false;
-		} else if (Math.random() > blackProb) {
-			isBlack = true;
-			isBlue = false;
-			isRed = false;
-		} else {
-			isBlue = false;
-			isRed = false;
-			isBlack = false;
-		}
+		if (Math.random() > 0.96) {
+			 	
+			  			isRed = false;
+			  			isBlue = false;
+			  			isBlack = true;
+			  			}
+			 		 else if (Math.random() > 0.96) {
+			 		
+			  			isRed = false;
+			  			isBlue = true;
+			  			isBlack = false;
+			 		 } 
+			 			
+			 	 else if (Math.random() > 0.7) {
+			 		isBlack = false;
+			 		isBlue = false;
+			  		isRed = true;
+			 	}
 	}
-
 	void update() {
 		super.update();
 		// System.out.println(x + "." + y + ".");
@@ -73,7 +69,7 @@ public class Falling_Blocks extends GameObject {
 		} else if (isRed) {
 			g.setColor(Color.RED);
 		} else if (isBlack) {
-			g.setColor(Color.LIGHT_GRAY);
+			g.setColor(Color.white);
 		} else {
 			g.setColor(Color.GRAY);
 		}
