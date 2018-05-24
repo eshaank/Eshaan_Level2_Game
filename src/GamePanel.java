@@ -244,6 +244,7 @@ void init(){
 		
 	}
 	void drawWinState(Graphics g) {
+		// 250 is the X coordinate for where the "l" in "You beat this level" touches the edge of the screen.
 	WinX += winX;
 if (WinX >= stageX) {
 	WinX =0;
