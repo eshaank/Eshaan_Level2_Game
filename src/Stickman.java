@@ -2,6 +2,8 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 
+import FinalJavaProject.GamePanel;
+
 public class Stickman extends GameObject {
 	float speed;
 

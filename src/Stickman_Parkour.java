@@ -8,6 +8,8 @@ import java.awt.event.KeyListener;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
+import FinalJavaProject.GamePanel;
+
 public class Stickman_Parkour extends JPanel implements ActionListener, KeyListener {
 	GamePanel panel;
 
