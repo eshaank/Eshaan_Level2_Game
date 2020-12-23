@@ -8,21 +8,21 @@ import java.awt.event.KeyListener;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-public class Stickman_Parkour extends JPanel implements ActionListener, KeyListener {
+public class MainClass extends JPanel implements ActionListener, KeyListener {
 	GamePanel panel;
 
 	JFrame frame;
 	static int width = 490;
 	int height = 920;
 
-	Stickman_Parkour() {
+	MainClass() {
 		panel = new GamePanel();
 		frame = new JFrame();
 		setup();
 	}
 
 	public static void main(String[] args) {
-		new Stickman_Parkour();
+		new MainClass();
 
 	}
 

@@ -2,10 +2,10 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 
-public class Stickman extends GameObject {
+public class PlayerObject extends GameObject {
 	float speed;
 
-	Stickman(int x, int y, int height, int width) {
+	PlayerObject(int x, int y, int height, int width) {
 		super();
 		speed = 5;
 		this.x = x;

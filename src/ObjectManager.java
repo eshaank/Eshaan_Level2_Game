@@ -64,7 +64,7 @@ public class ObjectManager {
 	}
 
 	public void manageEnemies() {
-		int enemyLane = new Random().nextInt(Stickman_Parkour.width) / 35;
+		int enemyLane = new Random().nextInt(MainClass.width) / 35;
 		if (System.currentTimeMillis() - enemyTimer >= enemySpawnTime) {
 			addObject(new Falling_Blocks(enemyLane * 35, 0, 35, 35, enemyLane));
 			enemyTimer = System.currentTimeMillis();
@@ -79,7 +79,7 @@ public class ObjectManager {
 				GameObject stickman = objects.get(i);
 				GameObject fallingBlock = objects.get(j);
 
-				if (stickman instanceof Stickman) {
+				if (stickman instanceof PlayerObject) {
 
 					if (stickman.collisionBox.intersects(fallingBlock.collisionBox)) {
 						if (((Falling_Blocks) fallingBlock).isRed) {
@@ -90,7 +90,7 @@ public class ObjectManager {
 
 						}
 					}
-					if (stickman instanceof Stickman) {
+					if (stickman instanceof PlayerObject) {
 
 //						if (stickman.collisionBox.intersects(fallingBlock.collisionBox)) {
 //							if (((Falling_Blocks) fallingBlock).isBlue) {
@@ -101,7 +101,7 @@ public class ObjectManager {
 //
 //							}
 //						}
-						if (stickman instanceof Stickman) {
+						if (stickman instanceof PlayerObject) {
 
 							if (stickman.collisionBox.intersects(fallingBlock.collisionBox)
 									|| stickman.collisionBox2.intersects(fallingBlock.collisionBox)
@@ -117,13 +117,13 @@ public class ObjectManager {
 
 							}
 						}
-						if (stickman instanceof Stickman) {
+						if (stickman instanceof PlayerObject) {
 //							if (stickman.y > 220) {
 //								enemySpawnTime = 700;
 //							}
 
 						}
-						if (stickman instanceof Stickman) {
+						if (stickman instanceof PlayerObject) {
 							if (stickman.y <= 375) {
 								enemySpawnTime = 225;
 							} 
@@ -131,7 +131,7 @@ public class ObjectManager {
 						if ((stickman.collisionBox.intersects(fallingBlock.collisionBox))) {
 							if (((Falling_Blocks) fallingBlock).isBlue) {
 								stickman.y -= 6;
-								((Stickman) stickman).speed += 0.3;
+								((PlayerObject) stickman).speed += 0.3;
 
 							} else {
 
